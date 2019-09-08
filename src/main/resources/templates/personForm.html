@@ -1,44 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Person</title>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-        <div>Person add a new one</div>
-        <form action="/person" method=""post">
-<table>
-    <tr>
-        <td>Imię:
-        <input type = "text"
-               th:field="${person.firstName}"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Nazwisko:
-        <input type = "text"
-               th:field="${person.lastName}"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Wiek:
-        <input type = "text"
-               th:field="${person.age}"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Płeć:
-        <input type = "text"
-               th:field="${person.sex}"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="submit" value="Rejestruj"/>
-        </td>
-    </tr>
-</table>
-        </form>
+<div>Person add a new one</div>
+<form action="/person" th:action="@{/person}" method="post">
+    <table>
+        <tr>
+            <td>Imię:
+                <input type="text" name="firstName"
+                       th:field="${person.firstName}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Nazwisko:
+                <input type="text" name="lastName"
+                       th:field="${person.lastName}"/>
+            </td>
+        </tr>
+        <tr>
+            <td >Wiek:
+                <input type="number" name="age"
+                       th:field="${person.age}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Pleć:
+                <input type="text" name="sex"
+                       th:field="${person.sex}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Rejestruj" />
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

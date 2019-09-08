@@ -1,9 +1,7 @@
-package demospringmvc.demo.reposytory;
+package demospringmvc.demo.repository;
 
 import demospringmvc.demo.model.Person;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import java.util.*;
 

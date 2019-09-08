@@ -1,7 +1,7 @@
 package demospringmvc.demo.service;
 
 import demospringmvc.demo.model.Person;
-import demospringmvc.demo.reposytory.PersonRepository;
+import demospringmvc.demo.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

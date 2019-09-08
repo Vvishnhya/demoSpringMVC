@@ -6,25 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div>Person information</div>
-<table>
+<div>Persons information</div>
+<table style="border: solid 1px black">
     <tr>
-        <td>Imię:</td>
-        <td th:text="${person.firstName}">Brak</td>
+        <th>Lp.</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th >Wiek</th>
+        <th>Pleć</th>
     </tr>
-    <tr>
-        <td>Nazwisko</td>
-        <td th:text="${person.lastName}">Brak</td>
-    </tr>
-    <tr>
-        <td >Wiek</td>
-        <td th:text="${person.age}">0</td>
-    </tr>
-    <tr>
-        <td>Pleć</td>
-        <td th:text="${person.sex}">Brak</td>
+    <tr th:each="person,rowStat : ${personList}">
+        <div th:object="${person}">
+            <td th:text="${rowStat.count}">0</td>
+            <td th:text="*{firstName}">Brak</td>
+            <td th:text="*{lastName}">Brak</td>
+            <td th:text="*{age}">0</td>
+            <td th:text="*{sex}">Brak</td>
+        </div>
     </tr>
 </table>
-<a href="#" th:href="${'/person/list'}">Lista osób</a>
+<a href="#" th:href="${'/person/add'}">dodaj nową osobę</a>
 </body>
 </html>

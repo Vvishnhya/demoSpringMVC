@@ -28,5 +28,4 @@ public class PersonController {
     public Person setPerson(@RequestBody Person newPerson) {
         return service.modifyPerson(newPerson);
     }
-
 }
