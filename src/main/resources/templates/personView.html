@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Person</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div>Person Information</div>
+<table>
+    <tr>
+        <td>Imię:</td>
+        <td th:text="${person.firstName}">Brak</td>
+    </tr>
+    <tr>
+        <td>Nazwisko:</td>
+        <td th:text="${person.lastName}">Brak</td>
+    </tr>
+    <tr>
+        <td>Wiek:</td>
+        <td th:text="${person.age}">0</td>
+    </tr>
+    <tr>
+        <td>Płeć:</td>
+        <td th:text="${person.sex}">Nieznana</td>
+    </tr>
+</table>
+</body>
+</html>

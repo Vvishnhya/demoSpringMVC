@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Person</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div>Person add a new one</div>
+        <form action="/person" method=""post">
+<table>
+    <tr>
+        <td>Imię:
+        <input type = "text"
+               th:value="${person.firstName}"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Nazwisko:
+        <input type = "text"
+               th:value="${person.lastName}"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Wiek:
+        <input type = "text"
+               th:value="${person.age}"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Płeć:
+        <input type = "text"
+               th:value="${person.sex}"/>
+        </td>
+    </tr>
+</table>
+        </form>
+</body>
+</html>
