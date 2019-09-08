@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
+< lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
     <title>Person</title>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
         <div>Person Information</div>
-<table>
-    <tr>
-        <td>Imię:</td>
-        <td th:text="${person.firstName}">Brak</td>
-    </tr>
-    <tr>
-        <td>Nazwisko:</td>
-        <td th:text="${person.lastName}">Brak</td>
-    </tr>
-    <tr>
-        <td>Wiek:</td>
-        <td th:text="${person.age}">0</td>
-    </tr>
-    <tr>
-        <td>Płeć:</td>
-        <td th:text="${person.sex}">Nieznana</td>
-    </tr>
+    <table style="border: solid 1px black">
+        <tr>
+            <th>Lp.</th>
+            <th>Imię:</th>
+            <th>Nazwisko:</th>
+            <th>Wiek:</th>
+            <th>Płeć:</th>
+        </tr>
+        <tr th:each="person, rowStat : ${personList}">
+            <div th:object="${person}">
+                <td th:text="${rowStat.count}">0</td>
+                <td th:text="*{firstName}">Brak</td>
+                <td th:text="*{lastName}">Brak</td>
+                <td th:text="*{age}">0</td>
+                <td th:text="*{sex}">Nieznana</td>
+            </div>
+        </tr>
 </table>
+        <a href="#" th:href="${'/person/list'}">dodaj nową osobę</a>
 </body>
 </html>

@@ -12,25 +12,30 @@
     <tr>
         <td>Imię:
         <input type = "text"
-               th:value="${person.firstName}"/>
+               th:field="${person.firstName}"/>
         </td>
     </tr>
     <tr>
         <td>Nazwisko:
         <input type = "text"
-               th:value="${person.lastName}"/>
+               th:field="${person.lastName}"/>
         </td>
     </tr>
     <tr>
         <td>Wiek:
         <input type = "text"
-               th:value="${person.age}"/>
+               th:field="${person.age}"/>
         </td>
     </tr>
     <tr>
         <td>Płeć:
         <input type = "text"
-               th:value="${person.sex}"/>
+               th:field="${person.sex}"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Rejestruj"/>
         </td>
     </tr>
 </table>
